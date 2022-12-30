@@ -1,0 +1,18 @@
+body {
+    background-color: #141414;
+}
+
+img {
+    max-width: 40vw;
+    height: auto;
+}
+
+.button-wrapper {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-content: center;
+}
