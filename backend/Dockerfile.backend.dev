@@ -1,6 +1,6 @@
 FROM node:18-alpine AS development
 
-WORKDIR /workdir-frontend/src/app
+WORKDIR /workdir-backend/src/app
 
 COPY package*.json ./
 
@@ -18,8 +18,8 @@ COPY package*.json ./
 
 RUN npm i
 
-COPY --from=development /workdir-frontend/src/app/dist ./dist
-COPY --chown=node:node . /workdir-frontend/src/app
+COPY --from=development /workdir-backend/src/app/dist ./dist
+COPY --chown=node:node . /workdir-backend/src/app
 
 USER node
 

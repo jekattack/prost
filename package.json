@@ -1,0 +1,11 @@
+{
+    "name": "docker",
+    "version": "0.0.0",
+    "scripts": {
+        "docker:local": "docker-compose -f ./docker/docker-compose.local.yml up",
+        "docker:prod": "docker-compose -f ./docker/docker-compose.prod.yml up"
+    },
+    "devDependencies": {
+        "@types/jest": "^29.1.2"
+    }
+}

@@ -1,8 +1,13 @@
 .git
 .editorconfig
 /.vscode/*
-/node_modules
+#/node_modules
 /e2e
 /docs
 .gitignore
 *.zip
+#dist
+#../frontend/node_modules
+#../frontend/dist
+#../backend/node_modules
+#../backend/dist

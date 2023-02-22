@@ -1,0 +1,26 @@
+version: "3.9"
+services:
+
+  frontend:
+    container_name: soundmachine-frontend
+    build: 
+      context: ../frontend
+      dockerfile: Dockerfile.frontend
+    ports:
+        - "80:4200"
+
+  backend:
+    build: 
+      context: ../backend
+      dockerfile: Dockerfile.backend
+    ports: 
+      - "3000:3000"
+
+  mongo:
+    image: mongo
+    restart: always
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: password
